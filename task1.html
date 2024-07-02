@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task 1</title>
+	 <link rel="icon" type="image/x-icon" href="images.png">
+	<style>
+		body{
+			margin:0px;
+		}
+		header{
+			height: auto;
+			background-color: #041E46;
+			width:auto;
+		}
+		header div{
+			padding-top: 8px;
+			padding-left:80%;
+			padding-bottom: 8px;
+		}
+		.btn a{
+			text-decoration:none;
+			color:black;
+		}
+		.btn{
+			font-size:16px;
+			height:38px;
+			width:75px;
+			background-color: white;
+			border: none;
+			border-radius: 2px;
+		}
+		.btn2{
+			margin-left: 8px;
+		}
+		/* navigatiob bar */
+		.bar{
+			height:10vh;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: row;
+            justify-content:center;
+            align-items: center;
+		}
+		.bar image{
+			background-size: cover;
+		}
+		.navigation-bar{
+			height:inherit;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: row;
+            justify-content:center;
+            align-items: center;
+		}
+		.navigation-bar .links a{
+			text-decoration: none;
+			font-family: Arial;
+			margin-left: 20px;
+			margin-right: 20px;
+			color: black;
+			font-size: 17px;
+			font-weight: bold;
+		}
+		.navigation-bar div{
+         
+		}
+		.bar .link1 a{
+			font-size: 25px;
+			font-weight: lighter;
+			margin-right: 100px;
+			text-decoration: none;
+			color: black;
+		}
+		.bar div input{
+			width: 200px;
+			height: 22px;
+			border:1px solid #DCDCDC;
+			border-radius:50px;
+			font-size: 15px;
+			padding: 4px 30px 4px 15px;
+			margin-left: 100px;
+			background-image: url('images.jpeg');
+			background-repeat: no-repeat;
+			background-size:20px 20px;
+			background-position: 98% 50%;
+		}
+		.links,.dropdown{
+			padding-top: 10px;
+			padding-bottom:10px;
+		}
+		.arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            vertical-align: text-top;
+            margin-top: 3px;
+            margin-left: 10px;
+        }
+		.down{
+          transform: rotate(45deg);
+		}
+		.dropdown{
+			position:relative;
+		}
+		.dropdowncontent{
+			position: absolute;
+			display: block;
+			top:100%;
+			bottom: 0;
+			margin-top: -10px;
+		}
+		.dropdowncontent a{
+			box-sizing: border-box;
+			display: none;
+			width: 180px;
+			text-decoration: none;
+			background-color: black;
+			color:white;
+			font-size: 18px;
+            font-family: Arial;
+            padding:10px 10px 10px 25px;
+            transition: 0.4s;
+		}
+		.dropdowncontent a:hover{
+			background-color: gray;
+		}
+		.dropdown:hover .dropdowncontent a{
+			display: block;
+		}
+		/* pricing */
+		.pricing{
+			box-sizing: border-box;
+			width:100%;
+			height: 50vh;
+			margin-top: 0px;
+			background-color: #041E46;
+		}
+		.pricing p{
+			font-size: 40px;
+			color:white;
+			text-align: center;
+			font-family: Arial;
+			overflow: hidden;
+			padding-top: 200px;
+			margin-top: 0;
+		}
+		/* text */
+		.marketing-automation{
+			width: 100%;
+			height:auto;
+			font-family: Arial;
+			font-size: 23px;
+			text-align: center;
+		}
+		.normal-text{
+			width: 70%;
+			height: auto;
+			margin: auto;
+			padding-top: 30px;
+		}
+		/* menu box */
+		.box{
+			width: 350px;
+			height:auto;
+			background-color: #041E46;
+			border:1px solid #041E46;
+			border-radius: 20px;
+			margin:auto;
+			font-family: Arial;
+			margin-top: 100px;
+			margin-bottom: 80px;
+		}
+		.box h1{
+			color: white;
+			text-align: center;
+			font-size: 50px;
+		}
+		.boton{
+			box-sizing: border-box;
+			padding-left: 120px;
+		}
+		.boton a{
+			width: 70px;
+			height: 30px;
+			text-decoration: none;
+			color:white;
+			text-align: center;
+			background-color: #71DEA4;
+			border:none;
+			border-radius: 25px;
+			padding:7px 12px 7px 12px;
+			transition: 0.2s;
+		}
+		.boton:hover a{
+			color:black;
+		}
+		.list {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			color: white;
+			font-family: Arial;
+			font-size: 14px;
+		}
+		.list-flexing{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+		.tick{
+			margin: 0px 15px 0px 20px;
+			align-self: center;
+		}
+		.tick img{
+			width:25px;
+			height:25px;
+		}
+		/* Footer */
+		footer{
+			height: 300px;
+			background-color:#041E46 ;
+		}
+		.footer-div1{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			background-color:#041E46 ;
+		}
+        .items {
+        	font-family: Arial;
+        	color: white;
+			font-size: 22px;
+			font-weight: bold;
+			
+        }
+        .footer-div1-items{
+        	margin:0px 150px 0px 150px;
+        }
+        .items a{
+        	margin: 80px 0px 80px 15px;
+        }
+        .footer-div1-items{
+        	margin-top: 30px;
+        }
+        .Success-Made-Simple{
+        	text-align: center;
+        	margin-top: 60px;
+        	font-family: Arial;
+        	color: white;
+			font-size: 18px;
+			font-weight: bold;
+        }
+		@media only screen and (max-width: 480px) {
+			
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div>
+		<button class="btn"><a href="#">Login</a></button>
+		<button class="btn btn2" style="width:140px;"><a href="#">Get started</a></button>
+	</div>
+</header>
+<div class="bar">
+	<div class="link1 links"><a href="#"><img src="images.png" style="width:48px; height: 48px; margin-top: 0px; margin-right:4px;vertical-align:middle;">Success Play</a></div>
+	<div class="navigation-bar">
+		    
+			<div class="links"><a href="#">About</a></div>
+			<div class="links"><a href="#">Solutions</a></div>
+			<div class=" dropdown">
+				<span class="links"style="font-family: Arial;color: black;font-size: 17px;font-weight: bold; margin-left: 20px;margin-right: 20px; cursor: pointer;">Industries<i class="arrow down"></i></span>
+				<div class="dropdowncontent">
+					<a href="#">Fitness</a>
+					<a href="#">Consumer-Retail</a>
+					<a href="#">Education</a>
+				</div>
+			</div>
+			<div class="links"><a href="#">Pricing</a></div>
+			<div class="links"><a href="#">Contact</a></div>
+		</div>
+		<div class="links"><input type="text"  placeholder="Search"></div>
+		</div>
+	<main>
+		<div class="pricing">
+			<p>Pricing</p>
+		</div>
+		<div class="marketing-automation">
+			<div class="normal-text">
+			<p style="font-weight: bolder;">Marketing Automation Platform & Account Management System.</p>
+			<p>One of the key differentiators of Success Play compared to other engagement platforms is the ongoing support we provide to ensure you recieve the maximum value from your marketing compaigns. We provide the tool and resources all on one single platform.</p>
+			</div>
+		</div>
+		<div class="box">
+			<h1>BUSINESS</h1>
+			<div class="boton">
+				<a href="#">Get a demo</a>
+			</div>
+			<div class="list">
+				<div class="list-flexing">
+					<div class="tick"><img src="tick2.gif"></div>
+					<div class="ptext"><p>Remove data silos and connect all your customer experiences in one place</p></div>
+				</div>
+				<div class="list-flexing">
+					<div class="tick"><img src="tick2.gif"></div>
+					<div class="ptext"><p>Develop custom audiences building and personalized segmentation</p></div>
+				</div>
+				<div class="list-flexing">
+					<div  class="tick"><img src="tick2.gif"></div>
+					<div class="ptext"><p>Send dynamic marketing automation communications through email and text</p></div>
+				</div>
+				<div class="list-flexing">
+					<div  class="tick"><img src="tick2.gif"></div>
+					<div class="ptext"><p>Test and learn what works (rapid experimentation)</p></div>
+				</div>
+				<div class="list-flexing">
+					<div class="tick"><img src="tick2.gif"></div>
+					<div class="ptext"><p>Advanced data analytics and reporting (see the trends and insights to enable smarter communication to drive more incremental conversion)</p></div>
+				</div>
+				<div class="list-flexing">
+					<div class="tick"><img src="tick2.gif"></div>
+					<div class="ptext"><p>Full solution support</p></div>
+				</div>
+				</div>
+		</div>
+	</main>
+	<footer>
+		<div class="footer-div1">
+			<div class="footer-div1-items">
+				<div class="items">
+					<p>Members</p>
+				</div>
+				<div class="items">
+					<a href="#" style="text-decoration: none;color: white;font-size: 18px;">Login</a>
+				</div>
+			</div>
+			<div class="footer-div1-items">
+				<div class="items">
+					<p>Company</p>
+				</div>
+				<div class="items">
+					<a href="#" style="text-decoration: none;color: white;font-size: 18px;">About</a>
+				</div>
+				<div class="items">
+					<a href="#" style="text-decoration: none;color: white;font-size: 18px;">Solutions</a>
+				</div>
+				<div class="items">
+					<a href="#" style="text-decoration: none;color: white;font-size: 18px;">Pricing</a>
+				</div>
+			</div>
+			<div class="footer-div1-items">
+				<div class="items">
+					<p>Support</p>
+				</div>
+				<div class="items">
+					<a href="#" style="text-decoration: none;color: white;font-size: 18px;">Contact Us</a>
+				</div>
+				<div class="items">
+					<a href="#" style="text-decoration: none;color: white;font-size: 18px;">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+		<div class="Success-Made-Simple">
+			<img src="images.png" style="width:48px; height: 48px; margin-top:-15px; margin-right:10px;vertical-align:text-top;"><span>Success Made Simple</span>
+		</div>
+	</footer>
+</body>
+</html>
